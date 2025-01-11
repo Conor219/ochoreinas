@@ -27,10 +27,19 @@
         }
     </style>
     <script>
+        var contador = 0;
+
         function cellClick(celda) {
-            celda.style = `background-image:url(reina.png);
-                            background-repeat: no-repeat;
-                            background-position: center;`;
+            if (window.getComputedStyle(celda).backgroundImage == "none") {
+                if(contador < 8) {
+                celda.style = `background-image:url(reina.png);
+                                background-repeat: no-repeat;
+                                background-position: center;`;
+                contador++;}
+            } else {
+                celda.style = `background-image: none;`;
+                contador--;
+            }
             // alert("Vamos bien");
         }
     </script>
