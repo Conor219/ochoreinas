@@ -1,0 +1,20 @@
+table, td {
+    border: 1px solid black; /* Este estilo se aplica a la tabla y a la celda */
+    border-collapse: collapse; /* Este estilo se aplica a la tabla y a la celda */
+    width: 400px; /* Este estilo solo se aplica a la tabla */
+    height: 50px; /* Este estilo solo se aplica a la celda */
+}
+
+tr:nth-child(even)
+td:nth-child(even),
+tr:nth-child(odd)
+td:nth-child(odd){
+    background-color: #FFCF9F;
+}
+
+tr:nth-child(odd)
+td:nth-child(even),
+tr:nth-child(even)
+td:nth-child(odd){
+    background-color: #D28C45;
+}
