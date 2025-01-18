@@ -1,130 +1,96 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Solución al problema de las 8 reinas</title>
-    <style>
-        table, td {
-            border: 1px solid black; /* Este estilo se aplica a la tabla y a la celda */
-            border-collapse: collapse; /* Este estilo se aplica a la tabla y a la celda */
-            width: 400px; /* Este estilo solo se aplica a la tabla */
-            height: 50px; /* Este estilo solo se aplica a la celda */
-        }
+    <title> Solución al problema de las 8 reinas </title>
+    
+    <link rel="stylesheet" href="./css/styles.css">
+    
+    <script src="./js/functions.js"></script>
 
-        tr:nth-child(even)
-        td:nth-child(even),
-        tr:nth-child(odd)
-        td:nth-child(odd){
-            background-color: #FFCF9F;
-        }
-
-        tr:nth-child(odd)
-        td:nth-child(even),
-        tr:nth-child(even)
-        td:nth-child(odd){
-            background-color: #D28C45;
-        }
-    </style>
-    <script>
-        var contador = 0;
-
-        function cellClick(celda) {
-            if (window.getComputedStyle(celda).backgroundImage == "none") {
-                if(contador < 8) {
-                celda.style = `background-image:url(reina.png);
-                                background-repeat: no-repeat;
-                                background-position: center;`;
-                contador++;}
-            } else {
-                celda.style = `background-image: none;`;
-                contador--;
-            }
-            // alert("Vamos bien");
-        }
-    </script>
 </head>
 <body>
-    <table>
+    <table id="tablero">
         <tr>
-            <td onclick="cellClick(this)"></td>
-            <td onclick="cellClick(this)"></td>
-            <td onclick="cellClick(this)"></td>
-            <td onclick="cellClick(this)"></td>
-            <td onclick="cellClick(this)"></td>
-            <td onclick="cellClick(this)"></td>
-            <td onclick="cellClick(this)"></td>
-            <td onclick="cellClick(this)"></td>
+            <td onclick="cellClick(this)" onmouseover="cambiarCelda(0,0)" onmouseleave="limpiarCelda()"></td>
+            <td onclick="cellClick(this)" onmouseover="cambiarCelda(0,1)" onmouseleave="limpiarCelda()"></td>
+            <td onclick="cellClick(this)" onmouseover="cambiarCelda(0,2)" onmouseleave="limpiarCelda()"></td>
+            <td onclick="cellClick(this)" onmouseover="cambiarCelda(0,3)" onmouseleave="limpiarCelda()"></td>
+            <td onclick="cellClick(this)" onmouseover="cambiarCelda(0,4)" onmouseleave="limpiarCelda()"></td>
+            <td onclick="cellClick(this)" onmouseover="cambiarCelda(0,5)" onmouseleave="limpiarCelda()"></td>
+            <td onclick="cellClick(this)" onmouseover="cambiarCelda(0,6)" onmouseleave="limpiarCelda()"></td>
+            <td onclick="cellClick(this)" onmouseover="cambiarCelda(0,7)" onmouseleave="limpiarCelda()"></td>
         </tr>
         <tr>
-            <td onclick="cellClick(this)"></td>
-            <td onclick="cellClick(this)"></td>
-            <td onclick="cellClick(this)"></td>
-            <td onclick="cellClick(this)"></td>
-            <td onclick="cellClick(this)"></td>
-            <td onclick="cellClick(this)"></td>
-            <td onclick="cellClick(this)"></td>
-            <td onclick="cellClick(this)"></td>
+            <td onclick="cellClick(this)" onmouseover="cambiarCelda(1,0)" onmouseleave="limpiarCelda()"></td>
+            <td onclick="cellClick(this)" onmouseover="cambiarCelda(1,1)" onmouseleave="limpiarCelda()"></td>
+            <td onclick="cellClick(this)" onmouseover="cambiarCelda(1,2)" onmouseleave="limpiarCelda()"></td>
+            <td onclick="cellClick(this)" onmouseover="cambiarCelda(1,3)" onmouseleave="limpiarCelda()"></td>
+            <td onclick="cellClick(this)" onmouseover="cambiarCelda(1,4)" onmouseleave="limpiarCelda()"></td>
+            <td onclick="cellClick(this)" onmouseover="cambiarCelda(1,5)" onmouseleave="limpiarCelda()"></td>
+            <td onclick="cellClick(this)" onmouseover="cambiarCelda(1,6)" onmouseleave="limpiarCelda()"></td>
+            <td onclick="cellClick(this)" onmouseover="cambiarCelda(1,7)" onmouseleave="limpiarCelda()"></td>
         </tr>
         <tr>
-            <td onclick="cellClick(this)"></td>
-            <td onclick="cellClick(this)"></td>
-            <td onclick="cellClick(this)"></td>
-            <td onclick="cellClick(this)"></td>
-            <td onclick="cellClick(this)"></td>
-            <td onclick="cellClick(this)"></td>
-            <td onclick="cellClick(this)"></td>
-            <td onclick="cellClick(this)"></td>
+            <td onclick="cellClick(this)" onmouseover="cambiarCelda(2,0)" onmouseleave="limpiarCelda()"></td>
+            <td onclick="cellClick(this)" onmouseover="cambiarCelda(2,1)" onmouseleave="limpiarCelda()"></td>
+            <td onclick="cellClick(this)" onmouseover="cambiarCelda(2,2)" onmouseleave="limpiarCelda()"></td>
+            <td onclick="cellClick(this)" onmouseover="cambiarCelda(2,3)" onmouseleave="limpiarCelda()"></td>
+            <td onclick="cellClick(this)" onmouseover="cambiarCelda(2,4)" onmouseleave="limpiarCelda()"></td>
+            <td onclick="cellClick(this)" onmouseover="cambiarCelda(2,5)" onmouseleave="limpiarCelda()"></td>
+            <td onclick="cellClick(this)" onmouseover="cambiarCelda(2,6)" onmouseleave="limpiarCelda()"></td>
+            <td onclick="cellClick(this)" onmouseover="cambiarCelda(2,7)" onmouseleave="limpiarCelda()"></td>
         </tr>
         <tr>
-            <td onclick="cellClick(this)"></td>
-            <td onclick="cellClick(this)"></td>
-            <td onclick="cellClick(this)"></td>
-            <td onclick="cellClick(this)"></td>
-            <td onclick="cellClick(this)"></td>
-            <td onclick="cellClick(this)"></td>
-            <td onclick="cellClick(this)"></td>
-            <td onclick="cellClick(this)"></td>
+            <td onclick="cellClick(this)" onmouseover="cambiarCelda(3,0)" onmouseleave="limpiarCelda()"></td>
+            <td onclick="cellClick(this)" onmouseover="cambiarCelda(3,1)" onmouseleave="limpiarCelda()"></td>
+            <td onclick="cellClick(this)" onmouseover="cambiarCelda(3,2)" onmouseleave="limpiarCelda()"></td>
+            <td onclick="cellClick(this)" onmouseover="cambiarCelda(3,3)" onmouseleave="limpiarCelda()"></td>
+            <td onclick="cellClick(this)" onmouseover="cambiarCelda(3,4)" onmouseleave="limpiarCelda()"></td>
+            <td onclick="cellClick(this)" onmouseover="cambiarCelda(3,5)" onmouseleave="limpiarCelda()"></td>
+            <td onclick="cellClick(this)" onmouseover="cambiarCelda(3,6)" onmouseleave="limpiarCelda()"></td>
+            <td onclick="cellClick(this)" onmouseover="cambiarCelda(3,7)" onmouseleave="limpiarCelda()"></td>
         </tr>
         <tr>
-            <td onclick="cellClick(this)"></td>
-            <td onclick="cellClick(this)"></td>
-            <td onclick="cellClick(this)"></td>
-            <td onclick="cellClick(this)"></td>
-            <td onclick="cellClick(this)"></td>
-            <td onclick="cellClick(this)"></td>
-            <td onclick="cellClick(this)"></td>
-            <td onclick="cellClick(this)"></td>
+            <td onclick="cellClick(this)" onmouseover="cambiarCelda(4,0)" onmouseleave="limpiarCelda()"></td>
+            <td onclick="cellClick(this)" onmouseover="cambiarCelda(4,1)" onmouseleave="limpiarCelda()"></td>
+            <td onclick="cellClick(this)" onmouseover="cambiarCelda(4,2)" onmouseleave="limpiarCelda()"></td>
+            <td onclick="cellClick(this)" onmouseover="cambiarCelda(4,3)" onmouseleave="limpiarCelda()"></td>
+            <td onclick="cellClick(this)" onmouseover="cambiarCelda(4,4)" onmouseleave="limpiarCelda()"></td>
+            <td onclick="cellClick(this)" onmouseover="cambiarCelda(4,5)" onmouseleave="limpiarCelda()"></td>
+            <td onclick="cellClick(this)" onmouseover="cambiarCelda(4,6)" onmouseleave="limpiarCelda()"></td>
+            <td onclick="cellClick(this)" onmouseover="cambiarCelda(4,7)" onmouseleave="limpiarCelda()"></td>
         </tr>
         <tr>
-            <td onclick="cellClick(this)"></td>
-            <td onclick="cellClick(this)"></td>
-            <td onclick="cellClick(this)"></td>
-            <td onclick="cellClick(this)"></td>
-            <td onclick="cellClick(this)"></td>
-            <td onclick="cellClick(this)"></td>
-            <td onclick="cellClick(this)"></td>
-            <td onclick="cellClick(this)"></td>
+            <td onclick="cellClick(this)" onmouseover="cambiarCelda(5,0)" onmouseleave="limpiarCelda()"></td>
+            <td onclick="cellClick(this)" onmouseover="cambiarCelda(5,1)" onmouseleave="limpiarCelda()"></td>
+            <td onclick="cellClick(this)" onmouseover="cambiarCelda(5,2)" onmouseleave="limpiarCelda()"></td>
+            <td onclick="cellClick(this)" onmouseover="cambiarCelda(5,3)" onmouseleave="limpiarCelda()"></td>
+            <td onclick="cellClick(this)" onmouseover="cambiarCelda(5,4)" onmouseleave="limpiarCelda()"></td>
+            <td onclick="cellClick(this)" onmouseover="cambiarCelda(5,5)" onmouseleave="limpiarCelda()"></td>
+            <td onclick="cellClick(this)" onmouseover="cambiarCelda(5,6)" onmouseleave="limpiarCelda()"></td>
+            <td onclick="cellClick(this)" onmouseover="cambiarCelda(5,7)" onmouseleave="limpiarCelda()"></td>
         </tr>
         <tr>
-            <td onclick="cellClick(this)"></td>
-            <td onclick="cellClick(this)"></td>
-            <td onclick="cellClick(this)"></td>
-            <td onclick="cellClick(this)"></td>
-            <td onclick="cellClick(this)"></td>
-            <td onclick="cellClick(this)"></td>
-            <td onclick="cellClick(this)"></td>
-            <td onclick="cellClick(this)"></td>
+            <td onclick="cellClick(this)" onmouseover="cambiarCelda(6,0)" onmouseleave="limpiarCelda()"></td>
+            <td onclick="cellClick(this)" onmouseover="cambiarCelda(6,1)" onmouseleave="limpiarCelda()"></td>
+            <td onclick="cellClick(this)" onmouseover="cambiarCelda(6,2)" onmouseleave="limpiarCelda()"></td>
+            <td onclick="cellClick(this)" onmouseover="cambiarCelda(6,3)" onmouseleave="limpiarCelda()"></td>
+            <td onclick="cellClick(this)" onmouseover="cambiarCelda(6,4)" onmouseleave="limpiarCelda()"></td>
+            <td onclick="cellClick(this)" onmouseover="cambiarCelda(6,5)" onmouseleave="limpiarCelda()"></td>
+            <td onclick="cellClick(this)" onmouseover="cambiarCelda(6,6)" onmouseleave="limpiarCelda()"></td>
+            <td onclick="cellClick(this)" onmouseover="cambiarCelda(6,7)" onmouseleave="limpiarCelda()"></td>
         </tr>
         <tr>
-            <td onclick="cellClick(this)"></td>
-            <td onclick="cellClick(this)"></td>
-            <td onclick="cellClick(this)"></td>
-            <td onclick="cellClick(this)"></td>
-            <td onclick="cellClick(this)"></td>
-            <td onclick="cellClick(this)"></td>
-            <td onclick="cellClick(this)"></td>
-            <td onclick="cellClick(this)"></td>
+            <td onclick="cellClick(this)" onmouseover="cambiarCelda(7,0)" onmouseleave="limpiarCelda()"></td>
+            <td onclick="cellClick(this)" onmouseover="cambiarCelda(7,1)" onmouseleave="limpiarCelda()"></td>
+            <td onclick="cellClick(this)" onmouseover="cambiarCelda(7,2)" onmouseleave="limpiarCelda()"></td>
+            <td onclick="cellClick(this)" onmouseover="cambiarCelda(7,3)" onmouseleave="limpiarCelda()"></td>
+            <td onclick="cellClick(this)" onmouseover="cambiarCelda(7,4)" onmouseleave="limpiarCelda()"></td>
+            <td onclick="cellClick(this)" onmouseover="cambiarCelda(7,5)" onmouseleave="limpiarCelda()"></td>
+            <td onclick="cellClick(this)" onmouseover="cambiarCelda(7,6)" onmouseleave="limpiarCelda()"></td>
+            <td onclick="cellClick(this)" onmouseover="cambiarCelda(7,7)" onmouseleave="limpiarCelda()"></td>
         </tr>
     </table>
 </body>
