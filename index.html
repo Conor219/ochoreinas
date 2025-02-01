@@ -92,6 +92,17 @@
             <td onclick="cellClick(this)" onmouseover="cambiarCelda(7,6)" onmouseleave="limpiarCelda()"></td>
             <td onclick="cellClick(this)" onmouseover="cambiarCelda(7,7)" onmouseleave="limpiarCelda()"></td>
         </tr>
-    </table>
+    </table><br>
+    <div>
+        <label for="solucionSelect">Selecciona una solución:</label>
+        <select id="solucionSelect" class="styled-select" onchange="cambiarSolucion()">
+            <option value="default" selected>---</option>
+            <option value="solucion1">Solución 1</option>
+            <option value="solucion2">Solución 2</option>
+            <option value="solucion3">Solución 3</option>
+        </select>
+    </div>
+
+    <button id="reiniciarBtn" class="reiniciar-btn" onclick="reiniciarTablero()">Reiniciar Tablero</button>    
 </body>
 </html>
